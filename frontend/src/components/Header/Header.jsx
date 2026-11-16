@@ -9,6 +9,7 @@ import './Header.css';
 const NAV_LINKS = [
     { label: 'Menú', to: '/productos' },
     { label: 'Combos', to: '/combos' },
+    { label: 'Sucursales', to: '/#sucursales' },
     { label: 'Nosotros', to: '/#nosotros' },
     { label: 'Contacto', to: '/#contacto' }
 ];

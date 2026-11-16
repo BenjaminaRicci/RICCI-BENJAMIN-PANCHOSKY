@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import ComboBuilderModal from '../../components/ComboBuilderModal/ComboBuilderModal.jsx';
 import Hero from '../../components/Hero/Hero.jsx';
 import SectionTitle from '../../components/SectionTitle/SectionTitle.jsx';
@@ -7,6 +7,7 @@ import ProductGrid from '../../components/ProductGrid/ProductGrid.jsx';
 import ComboBanner from '../../components/ComboBanner/ComboBanner.jsx';
 import CategoryTabs from '../../components/CategoryTabs/CategoryTabs.jsx';
 import Benefits from '../../components/Benefits/Benefits.jsx';
+import BranchesSection from '../../components/BranchesSection/BranchesSection.jsx';
 import AsyncState from '../../components/AsyncState/AsyncState.jsx';
 import StatusMessage from '../../components/StatusMessage/StatusMessage.jsx';
 import { useFetch } from '../../hooks/useFetch.js';
@@ -23,10 +24,22 @@ export default function HomePage() {
     const productos = useFetch(obtenerProductos);
     const categorias = useFetch(obtenerCategorias);
     const combos = useFetch(obtenerCombos);
-    const { data: sucursales } = useFetch(obtenerSucursales);
+    const sucursalesQuery = useFetch(obtenerSucursales);
+    const { data: sucursales } = sucursalesQuery;
     const { addItem } = useCart();
+    const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
     const [comboAArmar, setComboAArmar] = useState(null);
+
+    useEffect(() => {
+        if (location.hash !== '#sucursales') {
+            return undefined;
+        }
+        const frame = window.requestAnimationFrame(() => {
+            document.getElementById('sucursales')?.scrollIntoView();
+        });
+        return () => window.cancelAnimationFrame(frame);
+    }, [location.hash]);
 
     const categoriaParam = Number(searchParams.get('categoria'));
     const categoriaActiva =
@@ -129,6 +142,13 @@ export default function HomePage() {
                     )}
                 </AsyncState>
             </section>
+
+            <BranchesSection
+                sucursales={sucursales ?? []}
+                loading={sucursalesQuery.loading}
+                error={sucursalesQuery.error}
+                onRetry={sucursalesQuery.reload}
+            />
 
             <Benefits cantidadSucursales={sucursales?.length} />
 

@@ -64,6 +64,9 @@ export default function Footer() {
                             <Link to="/#nosotros">Quiénes somos</Link>
                         </li>
                         <li>
+                            <Link to="/#sucursales">Sucursales</Link>
+                        </li>
+                        <li>
                             <Link to="/admin">Panel del personal</Link>
                         </li>
                     </ul>
