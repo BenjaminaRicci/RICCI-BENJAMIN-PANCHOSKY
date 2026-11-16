@@ -1,0 +1,16 @@
+.combo-builder {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.combo-builder__price {
+    font-size: 1.05rem;
+}
+
+.combo-builder__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}

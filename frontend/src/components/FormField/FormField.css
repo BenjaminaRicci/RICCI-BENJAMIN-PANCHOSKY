@@ -1,0 +1,109 @@
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin: 0 0 1.1rem;
+    padding: 0;
+    border: none;
+    min-width: 0;
+}
+
+.form-field__label {
+    padding: 0;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.form-field__required {
+    color: var(--color-error);
+}
+
+.form-field__control {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    border: 2px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    transition: border-color var(--transition);
+}
+
+.form-field__control:hover {
+    border-color: var(--color-text-subtle);
+}
+
+.form-field__control:focus-visible {
+    border-color: var(--color-accent);
+}
+
+textarea.form-field__control {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-field--invalid .form-field__control {
+    border-color: var(--color-error);
+}
+
+.form-field__hint {
+    font-size: 0.85rem;
+    color: var(--color-text-subtle);
+}
+
+.form-field__error {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-error);
+}
+
+.form-field__error::before {
+    content: '⚠ ';
+}
+
+.form-field--checkbox {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.form-field--checkbox .form-field__hint {
+    flex-basis: 100%;
+}
+
+.form-field__checkbox,
+.radio-group__option input {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--color-brand-red);
+    cursor: pointer;
+}
+
+.radio-group__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.radio-group__option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--color-border-strong);
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: border-color var(--transition), background-color var(--transition);
+}
+
+.radio-group__option:has(input:checked) {
+    border-color: var(--color-brand-red);
+    background-color: var(--color-surface-alt);
+}
+
+.form-field--invalid .radio-group__option {
+    border-color: var(--color-error);
+}

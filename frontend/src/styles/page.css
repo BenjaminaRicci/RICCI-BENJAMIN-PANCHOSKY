@@ -1,0 +1,128 @@
+.page__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.page__title {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.page__subtitle {
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.page__back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-brand-mustard);
+}
+
+.page__subtitle-text {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-subtle);
+}
+
+.page__back:hover {
+    text-decoration: underline;
+}
+
+.page__stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filters > .form-field {
+    flex: 1 1 200px;
+    margin: 0;
+}
+
+.filters > .form-field--checkbox {
+    flex: 0 0 auto;
+    align-self: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge--success {
+    background-color: rgba(63, 185, 107, 0.15);
+    color: var(--color-success);
+}
+
+.badge--error {
+    background-color: rgba(255, 107, 95, 0.15);
+    color: var(--color-error);
+}
+
+.badge--warning {
+    background-color: rgba(242, 169, 0, 0.15);
+    color: var(--color-brand-mustard);
+}
+
+.badge--info {
+    background-color: rgba(110, 168, 254, 0.15);
+    color: #8fb8ff;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.form-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.page--narrow {
+    max-width: 640px;
+}
+
+.product-table.product-table--compact {
+    min-width: 0;
+}
+
+.combo-form__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+}

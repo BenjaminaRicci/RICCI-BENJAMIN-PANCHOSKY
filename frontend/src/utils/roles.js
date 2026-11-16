@@ -1,0 +1,13 @@
+export const ROLES = {
+    CLIENTE: 'CLIENTE',
+    EMPLEADO: 'EMPLEADO',
+    ADMINISTRADOR: 'ADMINISTRADOR'
+};
+
+export const ROLES_PERSONAL = [ROLES.EMPLEADO, ROLES.ADMINISTRADOR];
+
+export const ETIQUETAS_ROL = {
+    [ROLES.CLIENTE]: 'Cliente',
+    [ROLES.EMPLEADO]: 'Empleado',
+    [ROLES.ADMINISTRADOR]: 'Administrador'
+};

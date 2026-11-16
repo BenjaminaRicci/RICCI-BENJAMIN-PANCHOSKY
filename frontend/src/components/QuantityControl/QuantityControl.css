@@ -1,0 +1,38 @@
+.quantity {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity__button {
+    display: grid;
+    place-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    border: 2px solid var(--color-text-muted);
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.quantity__button:hover:not(:disabled) {
+    border-color: var(--color-brand-red);
+    background-color: var(--color-brand-red);
+    color: var(--color-on-brand);
+}
+
+.quantity__button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.quantity__value {
+    min-width: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}

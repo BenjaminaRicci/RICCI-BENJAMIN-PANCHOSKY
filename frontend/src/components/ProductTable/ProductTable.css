@@ -1,0 +1,74 @@
+.product-table__wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+}
+
+.product-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.product-table thead th {
+    background-color: var(--color-surface-alt);
+    color: var(--color-brand-mustard);
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.product-table tbody tr:hover {
+    background-color: var(--color-surface-alt);
+}
+
+.product-table tbody tr:last-child th,
+.product-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.product-table__name {
+    font-weight: 600;
+}
+
+.product-table__image {
+    width: 64px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.product-table__badge {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.product-table__badge--ok {
+    background-color: rgba(63, 185, 107, 0.15);
+    color: var(--color-success);
+}
+
+.product-table__badge--off {
+    background-color: rgba(255, 107, 95, 0.15);
+    color: var(--color-error);
+}
+
+.product-table__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}

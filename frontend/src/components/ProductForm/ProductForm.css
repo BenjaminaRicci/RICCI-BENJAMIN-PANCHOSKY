@@ -1,0 +1,23 @@
+.product-form__required-note {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: var(--color-text-subtle);
+}
+
+.product-form__required-note span {
+    color: var(--color-error);
+}
+
+.product-form__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0 1rem;
+}
+
+.product-form__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}

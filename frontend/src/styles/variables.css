@@ -1,0 +1,43 @@
+:root {
+    /* Paleta del boceto de Figma */
+    --color-brand-bg: #0d0d0d;
+    --color-brand-red: #cc1f1f;
+    --color-brand-red-dark: #8b1212;
+    --color-brand-red-light: #ff5a4f;
+    --color-brand-mustard: #f2a900;
+    --color-brand-text: #f0f0f0;
+    --color-brand-muted: #cccccc;
+
+    /* Tokens semánticos del tema oscuro */
+    --color-bg: var(--color-brand-bg);
+    --color-surface: #1c1c1c;
+    --color-surface-alt: #262626;
+    --color-surface-hover: #333333;
+    --color-border: #2e2e2e;
+    --color-border-strong: #4a4a4a;
+    --color-text: var(--color-brand-text);
+    --color-text-muted: var(--color-brand-muted);
+    --color-text-subtle: #999999;
+    --color-on-brand: #ffffff;
+    --color-on-accent: #0d0d0d;
+    --color-accent: var(--color-brand-mustard);
+    --color-success: #3fb96b;
+    --color-error: #ff6b5f;
+    --color-overlay: rgba(0, 0, 0, 0.7);
+
+    --font-title: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
+    --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+    --radius-pill: 999px;
+
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
+
+    --container-width: 1120px;
+    --header-height: 72px;
+    --transition: 0.2s ease;
+}

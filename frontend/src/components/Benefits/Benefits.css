@@ -1,0 +1,28 @@
+.benefits {
+    padding-block: 4rem;
+    background-color: var(--color-surface);
+    border-block: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.benefits__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-block: 0;
+    padding-inline: 5%;
+    list-style: none;
+}
+
+.benefits__title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-brand-mustard);
+}
+
+.benefits__text {
+    max-width: 28ch;
+    color: var(--color-text-muted);
+}

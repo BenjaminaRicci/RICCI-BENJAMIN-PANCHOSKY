@@ -1,0 +1,42 @@
+.checkout__back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-brand-mustard);
+}
+
+.checkout__back:hover {
+    text-decoration: underline;
+}
+
+.checkout__title {
+    margin-bottom: 2rem;
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+.checkout__layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+    gap: 2.5rem;
+}
+
+.checkout__subtitle {
+    margin-bottom: 1.25rem;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media (max-width: 860px) {
+    .checkout__layout {
+        grid-template-columns: 1fr;
+    }
+}
