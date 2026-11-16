@@ -105,3 +105,29 @@ main:focus {
         transition-duration: 0.01ms !important;
     }
 }
+
+@media (max-width: 600px) {
+    .container {
+        width: min(100% - 1.5rem, var(--container-width));
+    }
+
+    .section {
+        padding-block: 2.75rem;
+    }
+
+    .btn--sm {
+        min-height: 40px;
+    }
+
+    .btn--md {
+        min-height: 44px;
+    }
+
+    .btn--lg {
+        min-height: 48px;
+    }
+
+    .form-field__control {
+        min-height: 46px;
+    }
+}

@@ -72,3 +72,13 @@
 .product-card--unavailable .product-card__media {
     filter: grayscale(1) brightness(0.8);
 }
+
+@media (max-width: 600px) {
+    .product-card__footer {
+        align-items: stretch;
+    }
+
+    .product-card__footer .btn {
+        min-width: 0;
+    }
+}

@@ -113,3 +113,18 @@
         grid-column: 1 / -1;
     }
 }
+
+@media (max-width: 520px) {
+    .footer {
+        padding-top: 2.5rem;
+    }
+
+    .footer__grid {
+        gap: 1.5rem 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+    }
+}

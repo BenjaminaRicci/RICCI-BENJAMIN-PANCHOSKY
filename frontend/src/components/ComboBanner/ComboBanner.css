@@ -66,3 +66,24 @@
 .combo-banner--expired .combo-banner__price {
     color: var(--color-text-subtle);
 }
+
+@media (max-width: 360px) {
+    .combo-banner {
+        padding: 1.5rem 1rem;
+    }
+
+    .combo-banner__pricing {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .combo-banner__prices {
+        align-items: flex-start;
+    }
+
+    .combo-banner__pricing > .btn {
+        width: 100%;
+    }
+}
