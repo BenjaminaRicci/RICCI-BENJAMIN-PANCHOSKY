@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch.js';
 import { useCart } from '../../context/CartContext.jsx';
 import { obtenerCategorias } from '../../services/categoriaService.js';
-import logo from '../../assets/logo-icon.svg';
 import './Footer.css';
 
 const REDES = [
@@ -21,8 +20,7 @@ export default function Footer() {
             <div className="container footer__grid">
                 <div className="footer__brand">
                     <Link to="/" className="footer__logo">
-                        <img src={logo} alt="" width="32" height="32" />
-                        <span>Panchosky</span>
+                        <img src="/logo-panchosky.svg" alt="Panchosky" width="168" height="67" />
                     </Link>
                     <p className="footer__tagline">El sabor de la calle porteña desde 2012.</p>
                     <ul className="footer__social" aria-label="Redes sociales">

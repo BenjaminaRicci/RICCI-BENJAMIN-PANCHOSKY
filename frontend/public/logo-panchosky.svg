@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" role="img" aria-labelledby="title">
+  <title id="title">Panchosky</title>
+  <path d="M39 79C48 34 71 8 111 8h278c40 0 63 26 72 71" fill="#ffdf42" stroke="#20201e" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="8" y="42" width="484" height="91" rx="45.5" fill="#e5002b" stroke="#20201e" stroke-width="8"/>
+  <circle cx="28" cy="87.5" r="5.5" fill="#20201e"/>
+  <circle cx="472" cy="87.5" r="5.5" fill="#20201e"/>
+  <path d="M67 77c18 0 18-15 36-15s18 15 36 15 18-15 36-15 18 15 36 15 18-15 36-15 18 15 36 15 18-15 36-15 18 15 36 15 18-15 36-15 18 15 36 15" fill="none" stroke="#ffdf42" stroke-width="9" stroke-linecap="round"/>
+  <rect x="42" y="103" width="416" height="89" rx="44.5" fill="#ffdf42" stroke="#20201e" stroke-width="8"/>
+  <text x="250" y="168" text-anchor="middle" fill="#20201e" font-family="Anton, Impact, 'Arial Narrow', sans-serif" font-size="61" font-weight="900" textLength="345" lengthAdjust="spacingAndGlyphs">PANCHOSKY</text>
+</svg>

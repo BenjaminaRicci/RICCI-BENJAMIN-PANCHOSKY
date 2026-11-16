@@ -4,7 +4,6 @@ import Button from '../Button/Button.jsx';
 import { useCart } from '../../context/CartContext.jsx';
 import { useAuth } from '../../context/AuthContext.jsx';
 import { ROLES, ROLES_PERSONAL } from '../../utils/roles.js';
-import logo from '../../assets/logo-icon.svg';
 import './Header.css';
 
 const NAV_LINKS = [
@@ -66,8 +65,7 @@ export default function Header() {
             <div className="header__bar">
                 <div className="container header__inner">
                     <Link to="/" className="header__brand">
-                        <img src={logo} alt="" className="header__logo" />
-                        <span>Panchosky</span>
+                        <img src="/logo-panchosky.svg" alt="Panchosky Fast Food" className="header__logo" />
                     </Link>
 
                     <nav className="header__nav" aria-label="Principal">

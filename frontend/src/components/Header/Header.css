@@ -22,19 +22,15 @@
 .header__brand {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-title);
-    font-size: 1.7rem;
-    font-weight: 400;
-    color: var(--color-brand-mustard);
+    flex-shrink: 0;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
 }
 
 .header__logo {
-    width: 48px;
-    height: 48px;
+    display: block;
+    width: 142px;
+    height: 68px;
+    object-fit: contain;
 }
 
 .header__links {
@@ -180,13 +176,9 @@ button.header__dropdown-link {
 }
 
 @media (max-width: 480px) {
-    .header__brand span {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
+    .header__logo {
+        width: 112px;
+        height: 60px;
     }
 
     .header__actions {
