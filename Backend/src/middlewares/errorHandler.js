@@ -8,6 +8,11 @@ export const errorHandler = (err, req, res, next) => {
         return sendError(res, err.message, err.statusCode);
     }
 
+    // JSON mal formado en el cuerpo de la petición.
+    if (err.type === 'entity.parse.failed') {
+        return sendError(res, Messages.INVALID_DATA, 400);
+    }
+
     console.error(err);
     return sendError(res, Messages.INTERNAL_SERVER_ERROR, 500);
 };

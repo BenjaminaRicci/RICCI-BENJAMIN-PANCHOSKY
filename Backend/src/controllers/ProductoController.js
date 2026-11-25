@@ -1,20 +1,14 @@
 import ProductoService from '../services/ProductoService.js';
 import { sendSuccess } from '../responses/ApiResponse.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
-import { BadRequestError } from '../exceptions/AppError.js';
-import { Messages } from '../enums/Messages.js';
-
-const parseId = (rawId) => {
-    const id = Number(rawId);
-    if (Number.isNaN(id)) {
-        throw new BadRequestError(Messages.INVALID_DATA);
-    }
-    return id;
-};
+import { parseId, parseIdOpcional } from '../utils/parseId.js';
 
 class ProductoController {
     obtenerTodos = asyncHandler((req, res) => {
-        const productos = ProductoService.obtenerTodos();
+        const productos = ProductoService.obtenerTodos({
+            categoriaId: parseIdOpcional(req.query.categoriaId),
+            soloDisponibles: req.query.disponible === 'true'
+        });
         sendSuccess(res, productos);
     });
 
@@ -35,10 +29,16 @@ class ProductoController {
         sendSuccess(res, producto);
     });
 
+    cambiarDisponibilidad = asyncHandler((req, res) => {
+        const id = parseId(req.params.id);
+        const producto = ProductoService.cambiarDisponibilidad(id, req.body.disponible);
+        sendSuccess(res, producto);
+    });
+
     eliminar = asyncHandler((req, res) => {
         const id = parseId(req.params.id);
-        ProductoService.eliminar(id);
-        sendSuccess(res, null);
+        const resultado = ProductoService.eliminar(id);
+        sendSuccess(res, resultado);
     });
 }
 
